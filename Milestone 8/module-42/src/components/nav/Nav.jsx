@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "./Link";
 
 //Nav, Dynamic Nav, Nav using props
 
@@ -12,9 +13,15 @@ const navItems = [
 
 const Nav = () => {
   return (
-    <nav>
-      
+    <nav>      
       {/* Nav using props */}
+      <ul>
+        {
+          navItems.map(item =>
+              <Link key={item.id} item={item}></Link>
+          )
+        }
+      </ul>
 
       {/* Dynamic Nav */}
       {/* <ul>
