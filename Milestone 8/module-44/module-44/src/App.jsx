@@ -1,4 +1,5 @@
 import './App.css'
+import ControlledComponent from './components/Form/ControlledComponent'
 import FormAction from './components/Form/FormAction'
 import FormThroughTarget from './components/Form/FormThroughTarget'
 
@@ -12,6 +13,7 @@ function App() {
       
       <FormThroughTarget></FormThroughTarget>
       <FormAction></FormAction>
+      <ControlledComponent></ControlledComponent>
     </>
   )
 }
