@@ -1,6 +1,7 @@
 import React from "react";
 
-const Form = () => {
+// Form Submission Through Target
+const FormThroughTarget = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -11,6 +12,7 @@ const Form = () => {
 
   return (
     <div>
+      <h3>Form Data Collection Through Target</h3>
       <form action="" onSubmit={handleSubmit}>
         <input type="text" placeholder="name" name="name" />
         <br />
@@ -22,4 +24,5 @@ const Form = () => {
   );
 };
 
-export default Form;
+
+export default FormThroughTarget;
