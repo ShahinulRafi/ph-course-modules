@@ -47,6 +47,10 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: '*',
+        element: <h3>Not found</h3>
+      }
     ],
   },
 ]);
