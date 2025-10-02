@@ -3,7 +3,7 @@ import { Outlet } from "react-router";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
-
+import "./Root.css";
 const Root = () => {
   return (
     <div>
