@@ -3,6 +3,7 @@
       "name": "Basic Plan",
       "price": "$29.99/month",
       "id": 1,
+      "popular": true,
       "description": "Ideal for individuals who want to stay fit with essential gym access.",
       "features": [
         "Access to gym facilities during regular hours",
