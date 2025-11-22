@@ -35,9 +35,18 @@ async function run() {
     //connecting insert
     const db = client.db('smart_db');
     const productsCollection = db.collection('products');
+    const bidsCollection = db.collection("bids");
 
     app.get("/products", async (req, res) => {
-        const cursor = productsCollection.find();
+        // const cursor = productsCollection.find().sort({price_min: -1}).limit(2).project({_id: 0, title: 1});
+        console.log(req.query);
+
+        const email = req.query.email;
+        const query = {};
+        if(email){
+          query.email = email;
+        }
+        const cursor = productsCollection.find(query);
         const result = await cursor.toArray();
         res.send(result);
     });
@@ -74,6 +83,24 @@ async function run() {
         const query = {_id: new ObjectId(id)};
         const result = productsCollection.deleteOne(query);
         res.send(result);
+    })
+
+    //bids collection api
+    app.get('/bids', async(req, res) => {
+      const email = req.query.email;
+      const query = {};
+      if(email){
+        query.buyer_email = email;
+      }
+      const carsor = bidsCollection.find(query);
+      const result = await carsor.toArray();
+      res.send(result);
+    })
+
+    app.post('/bids', async(req, res) => {
+      const bid = req.body;
+      const result = await bidsCollection.insertOne(bid);
+      res.send(result);
     })
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
