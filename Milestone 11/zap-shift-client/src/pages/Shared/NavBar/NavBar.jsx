@@ -10,6 +10,9 @@ const NavBar = () => {
           <li>
             <NavLink to="">Other</NavLink>
           </li>
+          <li>
+            <NavLink to="/coverage">Coverage</NavLink>
+          </li>
   </>
   return (
     <div className="navbar bg-base-100 shadow-sm">
