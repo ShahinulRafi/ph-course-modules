@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  --color-primary: #ff9f43; /* Bright amber — cheerful and energetic */
+  --color-secondary: #6c5ce7; /* Soft purple — creative and friendly */
+  --color-accent: #00b894; /* Teal green — refreshing contrast */
+  --color-neutral: #f8f9fa; /* Clean white-gray background */
+  --color-base-100: #ffffff; /* Base background */
+  --color-info: #74b9ff; /* Calm sky blue */
+  --color-success: #55efc4; /* Minty fresh success */
+  --color-warning: #fdcb6e; /* Warm pastel yellow */
+  --color-error: #d63031; /* Slightly muted red */
+}
+
+
+* {
+  font-family: "Poppins", sans-serif;
+}
